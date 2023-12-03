@@ -11,7 +11,7 @@ const isRequired = parameter => {
 
 class PrecoDaHora {
 	constructor() {
-		const userAgent = randomUseragent.getRandom((ua) => ua.deviceType !== 'mobile');
+		const userAgent = randomUseragent.getRandom((ua) => ua.deviceType !== 'mobile' && ['Chrome', 'Firefox', 'Safari', 'Opera'].includes(ua.browserName));
 
 		const requestOptions = {};
 
