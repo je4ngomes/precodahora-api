@@ -24,6 +24,7 @@ test('getProduto', async t => {
 		totalPaginas: 0,
 		pageview: 'lista'
 	});
+	console.log(response.data);
 	t.is(response.data.codigo, 80);
 });
 

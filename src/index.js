@@ -1,5 +1,5 @@
 const {Cookie} = require('tough-cookie');
-const userAgentWithoutSeed = require('useragent-from-seed');
+const randomUseragent = require('random-useragent');
 const request = require('axios').default;
 const HTMLParser = require('node-html-parser');
 const querystring = require('querystring');
@@ -11,7 +11,7 @@ const isRequired = parameter => {
 
 class PrecoDaHora {
 	constructor() {
-		const userAgent = userAgentWithoutSeed();
+		const userAgent = randomUseragent.getRandom((ua) => ua.osName !== 'Android');
 
 		const requestOptions = {};
 
